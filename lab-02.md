@@ -100,10 +100,18 @@ données.
 ### Exercise 4
 
 ``` r
-# insert code here
+ggplot(data=plastic_waste%>%
+  filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap, y=mismanaged_plastic_waste_per_cap, color=continent)) +
+  geom_point()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- -->
+
+Il est possible de distinguer un échelle entre ceux qui gère bien leur
+déchet et ceux qui les gère mal. Par exemple, l’Afrique a autant de
+déchet que de déchet mal géré, ainsi, la presque totalité des déchets de
+l’afrique ne sont pas bien géré. L’Europe, c’est l’inverse, et on peut
+voir entre les deux, ce qui donne un échelle.
 
 ### Exercise 5
 
