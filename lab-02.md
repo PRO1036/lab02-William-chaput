@@ -77,16 +77,25 @@ ce cas-ci, c’est la transparemnce de la couleur que l’on vient regler.
 Boxplot:
 
 ``` r
-# insert code here
+ggplot(data=plastic_waste%>%
+  filter(plastic_waste_per_cap < 3.5), aes(y=plastic_waste_per_cap,x=continent)) +
+  geom_boxplot()
 ```
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
 
 Violin plot:
 
 ``` r
-# insert code here
+ggplot(data=plastic_waste%>%
+  filter(plastic_waste_per_cap < 3.5), aes(y=plastic_waste_per_cap,x=continent)) +
+  geom_violin()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-violin-1.png)<!-- -->
+
+Cela permet de voir de manière complète et précise la distribution des
+données.
 
 ### Exercise 4
 
