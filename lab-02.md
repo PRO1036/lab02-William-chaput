@@ -53,20 +53,24 @@ ggplot(data=plastic_waste%>%
     ## parameters: `binheight`
 
 ![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
+
 L’Afrique, l’Océanie et l’Asie produisent très peu de déchet en
-comparaison aux autres continents
+comparaison aux autres continents.
 
 ### Exercise 2
 
 ``` r
 ggplot(data=plastic_waste%>%
-  filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap )) +
-  geom_density()
+  filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap, color=continent, fill=continent )) +
+  geom_density(alpha=0.5)
 ```
 
 ![](lab-02_files/figure-gfm/plastic-waste-density-1.png)<!-- -->
 
-Réponse à la question…
+Les réglages aes sont associés aux variables. La focntion couleur,
+colorie les variable et celle de fill, rempli en dessous des variables
+Les reglages geom servent à relgler les paramètres des graohiques, dans
+ce cas-ci, c’est la transparemnce de la couleur que l’on vient regler.
 
 ### Exercise 3
 
