@@ -45,11 +45,11 @@ plastic_waste %>%
 ``` r
 ggplot(data=plastic_waste%>%
   filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap )) +
-  geom_histogram(binwidth = 0.15, binheight=5)+
+  geom_histogram(binwidth = 0.2, binheight=5)+
   facet_wrap(~continent, ncol(3))
 ```
 
-    ## Warning in geom_histogram(binwidth = 0.15, binheight = 5): Ignoring unknown
+    ## Warning in geom_histogram(binwidth = 0.2, binheight = 5): Ignoring unknown
     ## parameters: `binheight`
 
 ![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
@@ -142,5 +142,23 @@ populations plus denses.
 Recréez la visualisation:
 
 ``` r
-# insert code here
+ggplot(data=plastic_waste %>%
+  mutate(coastal_pop_prop = coastal_pop / total_pop)%>%
+  filter(plastic_waste_per_cap < 3), aes(x=coastal_pop_prop, y=plastic_waste_per_cap, color=continent)) +
+  geom_point()+
+  geom_smooth(method = "loess",
+              se = TRUE,      
+              color = "black",
+              fill = "grey")+
+  labs(title = "Quantité de déchet plastique Vs la proportion de la population côtière" ,subtitle = "Selon le continent", x= "Proportion de la population côtière", y= "Nombre de déchet plastique par habitant" )
 ```
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+    ## Warning: Removed 10 rows containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 10 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/recreate-viz-1.png)<!-- -->
