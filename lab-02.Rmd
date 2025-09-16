@@ -33,6 +33,7 @@ ggplot(data=plastic_waste%>%
   geom_histogram(binwidth = 0.15, binheight=5)+
   facet_wrap(~continent, ncol(3))
 ```
+L'Afrique, l'Océanie et l'Asie produisent très peu de déchet en comparaison aux autres continents
 
 ### Exercise 2
 
