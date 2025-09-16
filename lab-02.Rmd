@@ -31,7 +31,7 @@ plastic_waste %>%
 ggplot(data=plastic_waste%>%
   filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap )) +
   geom_histogram(binwidth = 0.15, binheight=5)+
-  facet_grid(~continent)
+  facet_wrap(~continent, ncol(3))
 ```
 
 ### Exercise 2
