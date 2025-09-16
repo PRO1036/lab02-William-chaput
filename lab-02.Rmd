@@ -83,14 +83,18 @@ Il est possible de distinguer un échelle entre ceux qui gère bien leur déchet
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+ggplot(data=plastic_waste%>%
+  filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap, y=total_pop, color=continent)) +
+  geom_point()
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+ggplot(data=plastic_waste%>%
+  filter(plastic_waste_per_cap < 3.5), aes(x=plastic_waste_per_cap, y=coastal_pop, color=continent)) +
+  geom_point()
 ```
 
-Réponse à la question...
+Dans les zones cotières, il y a  moins de déchet produit pour des populations plus denses. 
 
 ## Conclusion
 
