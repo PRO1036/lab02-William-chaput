@@ -113,3 +113,5 @@ ggplot(data=plastic_waste %>%
               fill = "grey")+
   labs(title = "Quantité de déchet plastique Vs la proportion de la population côtière" ,subtitle = "Selon le continent", x= "Proportion de la population côtière", y= "Nombre de déchet plastique par habitant" )
 ```
+
+Il est possible d’observer une légère tendance indiquant que lorsque la proportion de population côtière augmente, la quantité de déchets produits par habitant augmente également. Cependant, on constate facilement quels continents contribuent le plus à la pollution.

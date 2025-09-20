@@ -162,3 +162,8 @@ ggplot(data=plastic_waste %>%
     ## (`geom_point()`).
 
 ![](lab-02_files/figure-gfm/recreate-viz-1.png)<!-- -->
+
+Il est possible d’observer une légère tendance indiquant que lorsque la
+proportion de population côtière augmente, la quantité de déchets
+produits par habitant augmente également. Cependant, on constate
+facilement quels continents contribuent le plus à la pollution.
